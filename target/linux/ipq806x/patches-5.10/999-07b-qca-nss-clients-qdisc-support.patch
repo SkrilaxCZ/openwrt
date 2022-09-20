@@ -444,7 +444,7 @@
  	dev->netdev_ops	= &gre_tap_netdev_ops;
  	dev->priv_flags &= ~IFF_TX_SKB_SHARING;
  	dev->priv_flags	|= IFF_LIVE_ADDR_CHANGE;
-+	dev->priv_flags_qca_ecm |= IFF_QCA_ECM_GRE_V4_TAP; /* QCA NSS ECM Support */
++	dev->priv_flags_ext |= IFF_EXT_GRE_V4_TAP; /* QCA NSS ECM Support */
  	ip_tunnel_setup(dev, gre_tap_net_id);
  }
  
@@ -454,7 +454,7 @@
  
  	dev->priv_flags &= ~IFF_TX_SKB_SHARING;
  	dev->priv_flags |= IFF_LIVE_ADDR_CHANGE;
-+	dev->priv_flags_qca_ecm |= IFF_QCA_ECM_GRE_V6_TAP; /* QCA NSS ECM Support */
++	dev->priv_flags_ext |= IFF_EXT_GRE_V6_TAP; /* QCA NSS ECM Support */
  	netif_keep_dst(dev);
  }
  
