@@ -1,0 +1,179 @@
+From 9c5671410068a559513f3cca40e17897f3de63df Mon Sep 17 00:00:00 2001
+From: skrilax <skrilax@gmail.com>
+Date: Thu, 30 Oct 2025 10:19:03 -0700
+Subject: [PATCH] Remove default partitions
+
+---
+ include/configs/rk3036_common.h   |  1 -
+ include/configs/rk3066_common.h   |  1 -
+ include/configs/rk3128_common.h   |  1 -
+ include/configs/rk3188_common.h   |  1 -
+ include/configs/rk322x_common.h   |  1 -
+ include/configs/rk3288_common.h   |  1 -
+ include/configs/rk3308_common.h   |  1 -
+ include/configs/rk3328_common.h   |  1 -
+ include/configs/rk3399_common.h   |  1 -
+ include/configs/rk3568_common.h   |  1 -
+ include/configs/rk3588_common.h   |  1 -
+ include/configs/rockchip-common.h | 13 -------------
+ 12 files changed, 24 deletions(-)
+
+diff --git a/include/configs/rk3036_common.h b/include/configs/rk3036_common.h
+index 0bf9e8b9a2e..f60c51af639 100644
+--- a/include/configs/rk3036_common.h
++++ b/include/configs/rk3036_common.h
+@@ -25,7 +25,6 @@
+ #define CFG_EXTRA_ENV_SETTINGS \
+ 	"fdt_file=" CONFIG_DEFAULT_FDT_FILE "\0" \
+ 	"fdt_high=0x7fffffff\0" \
+-	"partitions=" PARTS_DEFAULT \
+ 	ENV_MEM_LAYOUT_SETTINGS \
+ 	"boot_targets=" BOOT_TARGETS "\0"
+ 
+diff --git a/include/configs/rk3066_common.h b/include/configs/rk3066_common.h
+index 6a3b6900463..9b85c15649a 100644
+--- a/include/configs/rk3066_common.h
++++ b/include/configs/rk3066_common.h
+@@ -24,7 +24,6 @@
+ #define CFG_EXTRA_ENV_SETTINGS \
+ 	"fdt_high=0x6fffffff\0" \
+ 	"initrd_high=0x6fffffff\0" \
+-	"partitions=" PARTS_DEFAULT \
+ 	ENV_MEM_LAYOUT_SETTINGS \
+ 	ROCKCHIP_DEVICE_SETTINGS \
+ 	"boot_targets=" BOOT_TARGETS "\0"
+diff --git a/include/configs/rk3128_common.h b/include/configs/rk3128_common.h
+index d8269b0ec96..70161904ee7 100644
+--- a/include/configs/rk3128_common.h
++++ b/include/configs/rk3128_common.h
+@@ -25,7 +25,6 @@
+ #define CFG_EXTRA_ENV_SETTINGS \
+ 	ENV_MEM_LAYOUT_SETTINGS \
+ 	"fdt_file=" CONFIG_DEFAULT_FDT_FILE "\0" \
+-	"partitions=" PARTS_DEFAULT \
+ 	"boot_targets=" BOOT_TARGETS "\0"
+ 
+ #endif
+diff --git a/include/configs/rk3188_common.h b/include/configs/rk3188_common.h
+index 98f2c25f3cf..7cff73572a0 100644
+--- a/include/configs/rk3188_common.h
++++ b/include/configs/rk3188_common.h
+@@ -26,7 +26,6 @@
+ 	"fdtfile=" CONFIG_DEFAULT_FDT_FILE "\0" \
+ 	"fdt_high=0x6fffffff\0" \
+ 	"initrd_high=0x6fffffff\0" \
+-	"partitions=" PARTS_DEFAULT \
+ 	ENV_MEM_LAYOUT_SETTINGS \
+ 	ROCKCHIP_DEVICE_SETTINGS \
+ 	"boot_targets=" BOOT_TARGETS "\0"
+diff --git a/include/configs/rk322x_common.h b/include/configs/rk322x_common.h
+index bab4ca015f7..17b9b170dae 100644
+--- a/include/configs/rk322x_common.h
++++ b/include/configs/rk322x_common.h
+@@ -26,7 +26,6 @@
+ #define CFG_EXTRA_ENV_SETTINGS \
+ 	"fdtfile=" CONFIG_DEFAULT_FDT_FILE "\0" \
+ 	"fdt_high=0x7fffffff\0" \
+-	"partitions=" PARTS_DEFAULT \
+ 	ENV_MEM_LAYOUT_SETTINGS \
+ 	"boot_targets=" BOOT_TARGETS "\0"
+ 
+diff --git a/include/configs/rk3288_common.h b/include/configs/rk3288_common.h
+index 0c449e31099..f66c313259e 100644
+--- a/include/configs/rk3288_common.h
++++ b/include/configs/rk3288_common.h
+@@ -28,7 +28,6 @@
+ 	"fdt_high=0x0fffffff\0" \
+ 	"initrd_high=0x0fffffff\0" \
+ 	"fdtfile=" CONFIG_DEFAULT_FDT_FILE "\0" \
+-	"partitions=" PARTS_DEFAULT \
+ 	ENV_MEM_LAYOUT_SETTINGS \
+ 	ROCKCHIP_DEVICE_SETTINGS \
+ 	"boot_targets=" BOOT_TARGETS "\0"
+diff --git a/include/configs/rk3308_common.h b/include/configs/rk3308_common.h
+index 2de55538fdf..7e0d18ed793 100644
+--- a/include/configs/rk3308_common.h
++++ b/include/configs/rk3308_common.h
+@@ -27,7 +27,6 @@
+ 
+ #define CFG_EXTRA_ENV_SETTINGS		\
+ 	"fdtfile=" CONFIG_DEFAULT_FDT_FILE "\0"	\
+-	"partitions=" PARTS_DEFAULT	\
+ 	ENV_MEM_LAYOUT_SETTINGS		\
+ 	ROCKCHIP_DEVICE_SETTINGS	\
+ 	"boot_targets=" BOOT_TARGETS "\0"
+diff --git a/include/configs/rk3328_common.h b/include/configs/rk3328_common.h
+index bd2bfe29103..2cb9fe52a16 100644
+--- a/include/configs/rk3328_common.h
++++ b/include/configs/rk3328_common.h
+@@ -27,7 +27,6 @@
+ 
+ #define CFG_EXTRA_ENV_SETTINGS		\
+ 	"fdtfile=" CONFIG_DEFAULT_FDT_FILE "\0"	\
+-	"partitions=" PARTS_DEFAULT	\
+ 	ENV_MEM_LAYOUT_SETTINGS		\
+ 	ROCKCHIP_DEVICE_SETTINGS	\
+ 	"boot_targets=" BOOT_TARGETS "\0"
+diff --git a/include/configs/rk3399_common.h b/include/configs/rk3399_common.h
+index d652ae4ca34..5991e7d4aa5 100644
+--- a/include/configs/rk3399_common.h
++++ b/include/configs/rk3399_common.h
+@@ -33,7 +33,6 @@
+ 
+ #define CFG_EXTRA_ENV_SETTINGS		\
+ 	"fdtfile=" CONFIG_DEFAULT_FDT_FILE "\0"	\
+-	"partitions=" PARTS_DEFAULT	\
+ 	ENV_MEM_LAYOUT_SETTINGS		\
+ 	ROCKCHIP_DEVICE_SETTINGS	\
+ 	"boot_targets=" BOOT_TARGETS "\0"
+diff --git a/include/configs/rk3568_common.h b/include/configs/rk3568_common.h
+index 09b7b71c6af..a68ca381db5 100644
+--- a/include/configs/rk3568_common.h
++++ b/include/configs/rk3568_common.h
+@@ -29,7 +29,6 @@
+ 
+ #define CFG_EXTRA_ENV_SETTINGS		\
+ 	"fdtfile=" CONFIG_DEFAULT_FDT_FILE "\0"	\
+-	"partitions=" PARTS_DEFAULT	\
+ 	ENV_MEM_LAYOUT_SETTINGS		\
+ 	ROCKCHIP_DEVICE_SETTINGS	\
+ 	"boot_targets=" BOOT_TARGETS "\0"
+diff --git a/include/configs/rk3588_common.h b/include/configs/rk3588_common.h
+index e6654c275ac..7b02560971a 100644
+--- a/include/configs/rk3588_common.h
++++ b/include/configs/rk3588_common.h
+@@ -28,7 +28,6 @@
+ 
+ #define CFG_EXTRA_ENV_SETTINGS		\
+ 	"fdtfile=" CONFIG_DEFAULT_FDT_FILE "\0"	\
+-	"partitions=" PARTS_DEFAULT	\
+ 	ENV_MEM_LAYOUT_SETTINGS		\
+ 	ROCKCHIP_DEVICE_SETTINGS	\
+ 	"boot_targets=" BOOT_TARGETS "\0"
+diff --git a/include/configs/rockchip-common.h b/include/configs/rockchip-common.h
+index 1d0947220d3..344d2421bd7 100644
+--- a/include/configs/rockchip-common.h
++++ b/include/configs/rockchip-common.h
+@@ -15,19 +15,6 @@
+ 
+ #define BOOT_TARGETS	"mmc0 mmc1 nvme scsi usb pxe dhcp spi"
+ 
+-#ifdef CONFIG_ARM64
+-#define ROOT_UUID "B921B045-1DF0-41C3-AF44-4C6F280D3FAE;\0"
+-#else
+-#define ROOT_UUID "69DAD710-2CE4-4E3C-B16C-21A1D49ABED3;\0"
+-#endif
+-#define PARTS_DEFAULT \
+-	"uuid_disk=${uuid_gpt_disk};" \
+-	"name=loader1,start=32K,size=4000K,uuid=${uuid_gpt_loader1};" \
+-	"name=loader2,start=8MB,size=4MB,uuid=${uuid_gpt_loader2};" \
+-	"name=trust,size=4M,uuid=${uuid_gpt_atf};" \
+-	"name=boot,size=112M,bootable,uuid=${uuid_gpt_boot};" \
+-	"name=rootfs,size=-,uuid="ROOT_UUID
+-
+ #endif
+ 
+ #endif /* _ROCKCHIP_COMMON_H_ */
+-- 
+2.43.0
+
